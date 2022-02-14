@@ -8,13 +8,14 @@
     "url": "git+https://github.com/georgedoescode/generative-utils.git"
   },
   "scripts": {
-    "build": "esbuild src/index.js --bundle --minify --format=esm --outfile=dist/index.js"
+    "build": "babel src -d dist"
   },
   "author": "George Francis",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/georgedoescode/generative-utils/issues"
   },
+  "browserslist": "> 0.25%, not dead",
   "homepage": "https://github.com/georgedoescode/generative-utils#readme",
   "dependencies": {
     "@timohausmann/quadtree-js": "^1.2.4",
@@ -26,6 +27,8 @@
     "simplex-noise": "^2.4.0"
   },
   "devDependencies": {
-    "esbuild": "^0.12.9"
+    "@babel/cli": "^7.17.0",
+    "@babel/core": "^7.17.2",
+    "@babel/preset-env": "^7.16.11"
   }
 }
